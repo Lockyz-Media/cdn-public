@@ -3,6 +3,7 @@
     --secondary-color: #8BC34A; /* Light Green */
     --accent-color: #FFC107; /* Amber */
     --background-color: #1E1E1E; /* Dark Gray */
+    --heading-color: #F5F5F5; /* Off White */
     --text-color: #E0E0E0; /* Light Gray */
     --navbar-hover-color: #388E3C; /* Darker Green for Hover */
 }
@@ -43,7 +44,7 @@ header {
 }
 
 .brand {
-    color: #fff;
+    color: var(--heading-color);
     font-size: 1.8rem;
     text-decoration: none;
     font-weight: bold;
@@ -90,12 +91,14 @@ header {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--heading-color);
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 p {
     font-size: 1.1rem;
     margin-bottom: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 .btn-discord {
