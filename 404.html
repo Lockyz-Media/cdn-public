@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name:="description" content:="Lockyz Media CDN">
-        <meta name:="author" content:="Robin Painter">
-        <link rel="icon" type="image/png" href="/images/logo.png">
-        <title>Lockyz Media CDN</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link href="./css/style.css" rel="stylesheet">
-        <style type="text/css"></style>
-    </head>
-    <header>
-        <nav class="navbar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lockyz Media CDN" />
+    <meta name="author" content="Robin Painter" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <title>Lockyz Media CDN</title>
+    <link href="./css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <a href="/" class="brand">Lockyz Media CDN</a>
                 <ul class="nav-links">
-                    <li><a href="https://discord.gg/NgpN3YYbMM">Discord</a></li>
+                    <li>
+                        <a href="https://discord.gg/NgpN3YYbMM" aria-label="Join our Discord server (opens in a new tab)" target="_blank" rel="noopener noreferrer">Discord</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <body class="centre">
-        <div class="main-content">
-            <h1>Is this what you're looking for?</h1>
-            <img src="https://media.tenor.com/i3Qc4TdcXwMAAAAj/duck-meme.gif" alt="A cool animated GIF">
-            <h1>Because otherwise I can't find it :(</h1>
-        </div>
-    </body>
-    <footer>
-        <div class="row">
-            <div class="text-center col-lg-6 offset-lg-3">
-                <p>Copyright &copy; Lockyz Media 2018 <script>new Date().getFullYear()>document.write("- "+new Date().getFullYear());</script> &middot; All Rights Reserved&nbsp;</p>
-            </div>
+    <main role="main" class="main-content">
+        <h1>Is this what you're looking for?</h1>
+        <img src="https://media.tenor.com/i3Qc4TdcXwMAAAAj/duck-meme.gif" alt="Animated GIF of a duck meme" class="responsive-img" />
+        <h1>Because otherwise I can't find it :(</h1>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; Lockyz Media 2018<span id="year-range"></span> &middot; All Rights Reserved</p>
         </div>
     </footer>
-</html>
 
-<script>
-    console.log("")
-    console.log("  _                _                __  __          _ _       ")
-    console.log(" | |              | |              |  \/  |        | (_)      ")
-    console.log(" | |     ___   ___| | ___   _ ____ | \  / | ___  __| |_  __ _ ")
-    console.log(" | |    / _ \ / __| |/ / | | |_  / | |\/| |/ _ \/ _` | |/ _` |")
-    console.log(" | |___| (_) | (__|   <| |_| |/ /  | |  | |  __/ (_| | | (_| |")
-    console.log(" |______\___/ \___|_|\_\\__, /___| |_|  |_|\___|\__,_|_|\__,_|")
-    console.log("                         __/ |                                ")
-    console.log("                        |___/                                 ")
-    console.log("")
-</script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        if (currentYear > 2018) {
+            document.getElementById('year-range').textContent = ` - ${currentYear}`;
+        }
+    </script>
+
+    <script>
+        console.log(`
+      _                _                __  __          _ _
+     | |              | |              |  \\/  |        | (_)
+     | |     ___   ___| | ___   _ ____ | \\  / | ___  __| |_  __ _
+     | |    / _ \\ / __| |/ / | | |_  / | |\\/| |/ _ \\/ _\` | |/ _\` |
+     | |___| (_) | (__|   <| |_| |/ /  | |  | |  __/ (_| | | (_| |
+     |______\\___/ \\___|_|\\_\\\\__, /___| |_|  |_|\\___|\\__,_|_|\\__,_|
+                            __/ |
+                           |___/
+    `);
+    </script>
+</body>
+</html>
 <!--
   _                _                __  __          _ _       
  | |              | |              |  \/  |        | (_)      
