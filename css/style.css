@@ -1,8 +1,24 @@
-/* Box sizing reset */
+:root {
+    --primary-color: #4CAF50; /* Soft Green */
+    --secondary-color: #8BC34A; /* Light Green */
+    --accent-color: #FFC107; /* Amber */
+    --background-color: #1E1E1E; /* Dark Gray */
+    --text-color: #E0E0E0; /* Light Gray */
+    --navbar-hover-color: #388E3C; /* Darker Green for Hover */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 80px;
 }
 
 header {
@@ -23,14 +39,19 @@ header {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* controls spacing between brand and links */
+    gap: 1.5rem;
 }
 
 .brand {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.brand:hover {
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -44,63 +65,61 @@ header {
     background-color: #222;
     color: #fff;
     border: 1px solid #444;
-    border-radius: 999px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links li a:hover {
-    background-color: #444;
+    background-color: var(--navbar-hover-color);
     color: #fff;
     border-color: #666;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    text-align: center;
-}
-
-body {
-    margin: 0;
-    background-image: url('../images/space.png');
-    background-repeat: repeat;
-    background-size: cover;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
-    padding-top: 80px;
-}
-
 .main-content {
     max-width: 800px;
-    margin: 0 auto;    
+    margin: 0 auto;
     text-align: center;
     padding: 2rem;
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-discord {
+    background-color: #454FBF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-discord:hover {
+    background-color: #5d6fa1;
+}
+
 footer {
     position: fixed;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    bottom: 0%;
+    background-color: var(--background-color);
+    bottom: 0;
     width: 100%;
     padding: 1rem;
-}
-
-pre {
-    color: white;
-}
-
-h1 {
-    font: bold;
-    font-variant: normal;
+    text-align: center;
+    color: var(--text-color);
 }
